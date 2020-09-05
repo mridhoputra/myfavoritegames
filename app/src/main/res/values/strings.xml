@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">List of My Favorite Games</string>
+    <string name="platform">Platform Used</string>
+    <string name="played_since">Played Since</string>
+    <string name="genre">Genre</string>
+    <string name="colon_sign">:</string>
+    <string name="menu_personal_profile">About Me</string>
+    <string name="my_name">M. Ridho Putra Sufa</string>
+    <string name="personal_email">m_ridhoputra@yahoo.com</string>
+    <string name="developer">Developer</string>
+    <string name="released_date">Released Date</string>
+    <string name="game_description">Game Description:</string>
+    <string name="screenshot">Screenshot:</string>
+    <string name="game_info">Game Info:</string>
+    <string name="some_text">Critics and suggestions are very welcome on this app</string>
+</resources>

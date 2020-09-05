@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/game_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="1dp"
+            style="@style/ThemeOverlay.AppCompat"/>
+
+        <ImageView
+            android:id="@+id/image_item_game_bigsize"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            tools:src="@android:color/darker_gray" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_item_game_round"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/image_item_game_bigsize"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerCrop"
+            tools:src="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tv_item_game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_item_game_round"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            tools:text="Game Name" />
+
+        <TextView
+            android:id="@+id/tv_item_quote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_item_game_name"
+            android:layout_marginBottom="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:justificationMode="inter_word"
+            tools:text="insert quote here." />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_game_info"
+            style="@style/card_view_base"
+            android:layout_below="@id/tv_item_quote"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:id="@+id/ll_game_metadata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="vertical"
+                android:paddingLeft="8dp">
+
+                <TextView
+                    android:id="@+id/header_game_info"
+                    style="@style/text_view_sub_header"
+                    android:text="@string/game_info" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp">
+
+                        <TextView
+                            style="@style/textview_base.field"
+                            android:text="@string/developer" />
+
+                        <TextView
+                            style="@style/textview_base.colon"
+                            android:text="@string/colon_sign" />
+
+                        <TextView
+                            android:id="@+id/tv_item_developer"
+                            style="@style/textview_base.value"
+                            tools:text="insert developer company" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp">
+
+                        <TextView
+                            style="@style/textview_base.field"
+                            android:text="@string/platform" />
+
+                        <TextView
+                            style="@style/textview_base.colon"
+                            android:text="@string/colon_sign" />
+
+                        <TextView
+                            android:id="@+id/tv_item_avalaible_platform"
+                            style="@style/textview_base.value"
+                            tools:text="insert platform" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp">
+
+                        <TextView
+                            style="@style/textview_base.field"
+                            android:text="@string/released_date" />
+
+                        <TextView
+                            style="@style/textview_base.colon"
+                            android:text="@string/colon_sign" />
+
+                        <TextView
+                            android:id="@+id/tv_item_release_date"
+                            style="@style/textview_base.value"
+                            tools:text="insert game released date" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp">
+
+                        <TextView
+                            style="@style/textview_base.field"
+                            android:text="@string/genre" />
+
+                        <TextView
+                            style="@style/textview_base.colon"
+                            android:text="@string/colon_sign" />
+
+                        <TextView
+                            android:id="@+id/tv_item_genre"
+                            style="@style/textview_base.value"
+                            tools:text="insert genre" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_game_description"
+            style="@style/card_view_base"
+            android:layout_below="@id/card_view_game_info"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp">
+
+                <TextView
+                    android:text="@string/game_description"
+                    style="@style/text_view_sub_header"/>
+
+                <TextView
+                    android:id="@+id/tv_item_game_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:justificationMode="inter_word"
+                    tools:text="insert game description here." />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_game_screenshot"
+            style="@style/card_view_base"
+            android:layout_below="@id/card_view_game_description"
+            card_view:cardCornerRadius="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="@string/screenshot"
+                    style="@style/text_view_sub_header" />
+
+                <ImageView
+                    android:id="@+id/image_item_game_screenshot"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:scaleType="fitXY"
+                    tools:src="@android:color/darker_gray" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>
